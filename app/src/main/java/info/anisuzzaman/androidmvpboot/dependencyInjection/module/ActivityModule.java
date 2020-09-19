@@ -30,13 +30,13 @@ public class ActivityModule {
 
     @Provides
     @Singleton
-    UserPresenter provideUserPresenter( ) {
+    UserPresenter provideUserPresenter() {
         return new UserPresenterImpl();
     }
 
     @Provides
     @Singleton
-    UserDatabaseService provideUserDatabaseService( ) {
+    UserDatabaseService provideUserDatabaseService() {
         return new UserDatabaseServiceImpl();
     }
 

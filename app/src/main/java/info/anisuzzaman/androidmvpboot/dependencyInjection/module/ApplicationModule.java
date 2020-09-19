@@ -48,7 +48,6 @@ public class ApplicationModule {
         return mApplication;
     }
 
-
     @Provides
     @Singleton
     MyDatabase provideDatabase(Application application) {
@@ -59,15 +58,16 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    UserDao provideUserDao(MyDatabase database) { return database.userDao(); }
+    UserDao provideUserDao(MyDatabase database) {
+        return database.userDao();
+    }
 
 
     @Provides
     @Singleton
-    UserDatabaseService provideUserDatabaseService( ) {
+    UserDatabaseService provideUserDatabaseService() {
         return new UserDatabaseServiceImpl();
     }
-
 
 
     @Provides
@@ -86,7 +86,9 @@ public class ApplicationModule {
     private static String BASE_URL = "https://api.github.com/";
 
     @Provides
-    Gson provideGson() { return new GsonBuilder().create(); }
+    Gson provideGson() {
+        return new GsonBuilder().create();
+    }
 
     @Provides
     Retrofit provideRetrofit(Gson gson) {

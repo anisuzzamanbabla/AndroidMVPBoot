@@ -21,7 +21,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         context = getApplicationContext();
-        appInstance=this;
+        appInstance = this;
         mApplicationComponent = DaggerApplicationComponent.builder()
                 .applicationModule(new ApplicationModule(this))
                 .build();
@@ -42,6 +42,6 @@ public class App extends Application {
     }
 
     public static synchronized App getAppInstance() {
-       return appInstance;
+        return appInstance;
     }
 }

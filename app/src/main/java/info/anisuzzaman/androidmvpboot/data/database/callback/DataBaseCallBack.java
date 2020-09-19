@@ -6,5 +6,6 @@ package info.anisuzzaman.androidmvpboot.data.database.callback;
 
 public interface DataBaseCallBack {
     void onDataLoad(Object data);
+
     void onError(String error);
 }

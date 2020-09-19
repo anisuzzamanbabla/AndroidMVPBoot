@@ -33,12 +33,12 @@ public class UserDatabaseServiceImpl implements UserDatabaseService {
     }
 
     @Override
-    public void load(String userLogin,DataBaseCallBack dataBaseCallBack) {
+    public void load(String userLogin, DataBaseCallBack dataBaseCallBack) {
         new DatabaseAsyncTask(dataBaseCallBack).execute(LOAD, userLogin);
     }
 
     @Override
-    public void hasUser(String userLogin, Date lastRefreshMax,DataBaseCallBack dataBaseCallBack) {
+    public void hasUser(String userLogin, Date lastRefreshMax, DataBaseCallBack dataBaseCallBack) {
         new DatabaseAsyncTask(dataBaseCallBack).execute(HAS_DATA, userLogin, lastRefreshMax);
     }
 

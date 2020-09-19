@@ -17,5 +17,6 @@ import info.anisuzzaman.androidmvpboot.data.database.entity.User;
 @TypeConverters(DateConverter.class)
 public abstract class MyDatabase extends RoomDatabase {
     private static volatile MyDatabase myDatabase;
+
     public abstract UserDao userDao();
 }

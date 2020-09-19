@@ -54,10 +54,10 @@ public class UserActivity extends BaseActivity implements UserView {
         setSupportActionBar(toolbar);
     }
 
-    @Override
-    protected void onDestroy() {
-        super.onDestroy();
-        userPresenter.detachView();
+
+    @OnClick(R.id.btnLoadData)
+    void btnLoadData() {
+        userPresenter.getUser(editTextUserLogin.getText().toString().equals("") ? "anisuzzamanbabla" : editTextUserLogin.getText().toString());
     }
 
     @Override
@@ -74,10 +74,6 @@ public class UserActivity extends BaseActivity implements UserView {
         textViewUserName.setText(error);
     }
 
-    @OnClick(R.id.btnLoadData)
-    void btnLoadData() {
-        userPresenter.getUser(editTextUserLogin.getText().toString().equals("")?"anisuzzamanbabla":editTextUserLogin.getText().toString());
-    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -93,4 +89,11 @@ public class UserActivity extends BaseActivity implements UserView {
         }
         return super.onOptionsItemSelected(item);
     }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+        userPresenter.detachView();
+    }
+
 }
