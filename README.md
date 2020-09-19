@@ -7,7 +7,7 @@ This repository contains a detailed sample app that implements MVP architecture 
  Glide**
 
 <p align="left">
-    <img src=https://github.com/anisuzzamanbabla/AndroidMVPBoot/blob/master/screenshot/screenshot1.png width=360 height=640 />
+    <img src=https://github.com/anisuzzamanbabla/AndroidMVPBoot/blob/master/screenshot/screenshot1.png width=260 height=460 />
 </p>
 
 ### Library reference resources:
