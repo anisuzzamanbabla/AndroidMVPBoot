@@ -13,7 +13,7 @@ import info.anisuzzaman.androidmvpboot.data.database.entity.User;
  * Created by anisuzzaman on 18/9/20.
  */
 
-@Database(entities = {User.class}, version = 1)
+@Database(entities = {User.class}, version = 1,exportSchema=false)
 @TypeConverters(DateConverter.class)
 public abstract class MyDatabase extends RoomDatabase {
     private static volatile MyDatabase myDatabase;

@@ -76,13 +76,6 @@ public class ApplicationModule {
     }
 
 
-    @Provides
-    @Singleton
-    DataManager provideDataManager(UserWebservice webservice, UserDatabaseService userDatabaseService, Executor executor) {
-        return new DataManager(webservice, userDatabaseService, executor);
-    }
-
-
     private static String BASE_URL = "https://api.github.com/";
 
     @Provides

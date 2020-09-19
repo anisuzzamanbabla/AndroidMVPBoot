@@ -19,6 +19,7 @@ public class UserDatabaseServiceImpl implements UserDatabaseService {
 
     private static final String SAVE = "Save", LOAD = "Load", HAS_DATA = "HasData";
 
+    @Inject
     UserDao userDao;
 
     @Inject

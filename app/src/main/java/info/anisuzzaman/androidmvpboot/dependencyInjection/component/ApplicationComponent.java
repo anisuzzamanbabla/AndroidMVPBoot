@@ -21,10 +21,6 @@ public interface ApplicationComponent {
 
     void inject(App app);
 
-    Context context();
-
-    Application provideApplication();
-
     DataManager provideDataManager();
 
     UserDao provideUserDao();

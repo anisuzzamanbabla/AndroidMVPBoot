@@ -15,6 +15,7 @@ import info.anisuzzaman.androidmvpboot.ui.presenter.UserPresenterImpl;
 /**
  * Created by anisuzzaman on 19/9/20.
  */
+
 @Module
 public class ActivityModule {
     private Activity mActivity;
@@ -32,12 +33,6 @@ public class ActivityModule {
     @Singleton
     UserPresenter provideUserPresenter() {
         return new UserPresenterImpl();
-    }
-
-    @Provides
-    @Singleton
-    UserDatabaseService provideUserDatabaseService() {
-        return new UserDatabaseServiceImpl();
     }
 
     @Provides

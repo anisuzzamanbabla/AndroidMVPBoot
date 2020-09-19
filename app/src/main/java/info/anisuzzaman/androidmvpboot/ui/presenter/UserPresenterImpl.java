@@ -15,8 +15,7 @@ import info.anisuzzaman.androidmvpboot.ui.view.UserView;
 public class UserPresenterImpl implements UserPresenter {
     private UserView userView;
 
-    @Inject
-    DataManager mDataManager;
+    private DataManager mDataManager;
 
     @Inject
     public UserPresenterImpl() {
